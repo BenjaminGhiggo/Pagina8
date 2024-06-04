@@ -9,7 +9,7 @@ const Header = () => {
                 {/* Puedes dejar este espacio en blanco o poner un logo adicional */}
             </div>
             <div className="header-title">
-                <h1>Caldora múltiples funciones</h1>
+                <h1>Caldora2 múltiples funciones</h1>
             </div>
             <div className="header-right">
                 <button className="header-button">Sign Up</button>
