@@ -7,17 +7,19 @@ import Home from './pages/Home/Home';
 
 const App = () => {
     return (
-        <Router>
+        <Router basename="/Pagina8">
             <div className="app-container">
                 <Sidebar />
                 <div className="main-content">
                     <Header />
                     <Routes>
                         <Route path="/" element={<Home />} />
+                        {/* Agrega más rutas aquí si es necesario */}
                     </Routes>
                 </div>
             </div>
         </Router>
     );
 };
+
 export default App;
