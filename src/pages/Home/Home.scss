@@ -1,0 +1,19 @@
+.home {
+    display: flex;
+    height: 100vh; // Ocupa toda la altura de la ventana
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    width: 100%;
+    box-sizing: border-box;
+}
