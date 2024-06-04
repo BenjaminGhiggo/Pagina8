@@ -1,29 +1,30 @@
 .header-container {
-    width: 100%; // Asegura que ocupe todo el ancho
+    width: 100%;
     padding: 5px 20px;
-    background-color: #87CEFA; // Color de fondo celeste
-    border: 2px solid black; // Borde negro
-    border-radius: 30px; // Bordes redondeados
-    box-sizing: border-box; // Incluye el padding en el ancho total
+    background-color: #87CEFA;
+    border: 2px solid black;
+    border-radius: 30px;
+    box-sizing: border-box;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative; // Necesario para posicionar el título centralmente
+    position: relative;
+    flex-wrap: wrap; // Permite que los elementos se envuelvan en varias líneas
 }
 
 .header-left {
     display: flex;
     align-items: center;
-    flex: 1; // Permite que el contenedor izquierdo ocupe espacio disponible
+    flex: 1;
 }
 
 .header-title {
-    position: center; // Posiciona el título de manera absoluta
-    left: 50%; // Ajusta la posición horizontal del título
-    transform: translateX(-50%); // Centra el título
+    position: relative;
+    flex-grow: 1;
+    text-align: center;
     h1 {
         font-size: 1.5rem;
-        color: #000; // Color del texto
+        color: #000;
         margin: 0;
     }
 }
@@ -31,7 +32,8 @@
 .header-right {
     display: flex;
     align-items: center;
-
+    justify-content: center;
+    flex: 1;
     .header-button {
         background-color: white;
         border: 2px solid #000;
@@ -41,51 +43,47 @@
         cursor: pointer;
         font-size: 1rem;
         font-weight: bold;
-        color: #000; // Color del texto
+        color: #000;
         text-transform: uppercase;
     }
-
     .profile-icon {
-        width: 50px; // Ajusta el ancho del icono
-        height: 50px; // Ajusta la altura del icono
+        width: 50px;
+        height: 50px;
         border-radius: 50%;
         margin-left: 10px;
     }
 }
 
-
-.header-left {
-    display: flex;
-    align-items: center;
-
-    h1 {
-        font-size: 1.5rem;
-        color: #000; // Color del texto
-        margin: 0;
+@media (max-width: 768px) {
+    .header-title h1 {
+        font-size: 1.2rem; // Ajusta el tamaño del texto para pantallas más pequeñas
     }
-}
 
-.header-right {
-    display: flex;
-    align-items: center;
+    .header-right {
+        justify-content: flex-end; // Alinea a la derecha en pantallas pequeñas
+    }
 
     .header-button {
-        background-color: white;
-        border: 2px solid #000;
-        border-radius: 20px;
-        padding: 10px 20px;
-        margin-left: 0px;
-        cursor: pointer;
-        font-size: 1rem;
-        font-weight: bold;
-        color: #000; // Color del texto
-        text-transform: uppercase;
+        font-size: 0.8rem; // Ajusta el tamaño del botón para pantallas más pequeñas
+        padding: 5px 10px;
     }
 
     .profile-icon {
-        width: 150px;
+        width: 40px; // Ajusta el tamaño del ícono de perfil para pantallas más pequeñas
         height: 40px;
-        border-radius: 50%;
-        margin-left: 0px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-container {
+        flex-direction: column; // Apila los elementos verticalmente en pantallas muy pequeñas
+    }
+
+    .header-title {
+        margin-bottom: 10px;
+    }
+
+    .header-right {
+        justify-content: center; // Centra los botones en pantallas muy pequeñas
     }
 }
